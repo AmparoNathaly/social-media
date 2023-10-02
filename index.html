@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Social Media</title>
     <style>
-        /* Estilo GENERAL */
+    /* Estilo GENERAL */
         html {
             height: 100%;
             margin: 0;
@@ -50,8 +50,8 @@
             grid-column-start: 1;
             grid-column-end: 3;
         }
-        /* Estilo ESPECÍFICO */
-        /* Header */
+    /* Estilo ESPECÍFICO */
+    /* Header */
         .encabezado {
             display: flex;
             justify-content: space-between;
@@ -78,8 +78,8 @@
             transform: scale(1.5);
             filter: hue-rotate(90deg);
         }
-        /* MAIN */
-        /* Descripción de publicación */
+    /* MAIN */
+    /* Descripción de publicación */
         .contenedor-descripcion-publicacion {
             display: flex; 
         }
@@ -104,14 +104,14 @@
             font-size: 1em;
             color: rgb(58, 10, 104);
         }
-        /* Publicación */
+    /* Publicación */
         .texto-publicacion {
             font-size: 1em;
         }
         .imagen-compartida img{
             border-radius: 5%;
         }
-        /* Descripción de comentarios */
+    /* Descripción de comentarios */
         .contenedor-descripcion-comentario{
             display: flex;
             position: relative;
@@ -137,7 +137,7 @@
             margin-left: 10px;
             color: rgba(28, 26, 121, 0.781);
         }
-        /* Comentarios */
+    /* Comentarios */
         .comentario {
             font-size: 0.8em;
         }
@@ -151,8 +151,8 @@
             height: 3px;
             background-color: rgba(16, 165, 48, 0.603);
         }
-        /* ASIDE */
-        /* Nombre de presentación*/
+    /* ASIDE */
+    /* Nombre de presentación*/
         aside {
             flex-direction: column;
         }
@@ -182,7 +182,7 @@
             font-size: 1.2em;
             color: rgb(76, 88, 3);;
         }
-        /* Íconos Laterales */
+    /* Íconos Laterales */
         .icono-lateral {
             padding-left: 20px;
             transition: transform 0.3s, filter 0.3s;
@@ -199,7 +199,7 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+<!-- Header -->
     <header class="encabezado">
         <div>
             <h1 class="titulo">La Colmena </h1> 
@@ -212,7 +212,8 @@
     <main>
         <div>
             <div class="publicacion">
-                <!-- Descripción de publicación -->
+        <!-- Publicación 1 -->
+            <!-- Descripción de publicación -->
                 <div class="contenedor-descripcion-publicacion">
                     <div class="contenedor-foto-publicacion">
                         <img src="./lizzi.jpg">
@@ -220,28 +221,28 @@
                     <p class="texto-descripcion-publicacion"> Elizabeth Bennet.  Hertfordshire. Noviembre-1813
                     </p>
                 </div>
-                <!-- Publicación -->
+            <!-- Publicación -->
                 <div class="texto-publicacion">
                     <p class="texto-vario">Saludos a todos los amigos que conocí en el baile, menos a uno 🙄</p>
                     <div class="imagen-compartida">
                         <img src="./primer baile.jpg">
                     </div>
                 </div>
-                <!-- Reacciones a la publicación -->
+            <!-- Reacciones a publicación -->
                 <div>
                     <span>❤️</span>
                     <span>💬</span>
                 </div>
-                <!-- Comentarios -->
+            <!-- Comentarios -->
                 <div>
                     <p class="texto-vario">Comentarios</p>
-                    <!-- Descripción de comentarios -->
+                <!-- Descripción de comentarios -->
                 </div>
             </div>
-            <!-- Publicación 2 -->
+        <!-- Publicación 2 -->
             <hr class="divisor-big">
             <div class="publicacion">
-                <!-- Descripción de publicación -->
+            <!-- Descripción de publicación -->
                 <div class="contenedor-descripcion-publicacion">
                     <div class="contenedor-foto-publicacion">
                         <img src="./lizzi.jpg">
@@ -249,29 +250,29 @@
                     <p class="texto-descripcion-publicacion"> Elizabeth Bennet. Pemberley. Abril-1814
                     </p>
                 </div>
-                <!-- Publicación -->
+            <!-- Publicación -->
                 <div class="texto-publicacion">
                     <p class="texto-vario">De visita con mi querida amiga en casa de Lady Catherine</p>
                     <div class="imagen-compartida">
                         <img src="./piano.jpg">
                     </div>
                 </div>
-                <!-- Reacciones a la publicación -->
+            <!-- Reacciones a la publicación -->
                 <div>
                     <span>❤️</span>
                     <span>💬</span>
                 </div>
-                <!-- Comentarios -->
+            <!-- Comentarios -->
                 <div>
                     <p class="texto-vario">Comentarios</p>
-                    <!-- Descripción de comentarios -->
+                <!-- Descripción de comentarios -->
                     <div class="contenedor-descripcion-comentario">
                         <div class="contenedor-foto-comentario">
                             <img src="./darcy.jpg">
                         </div>
                         <p class="texto-descripcion-comentario">Fitzwilliam Darcy. Pemberley. Abril-1814</p>
                     </div>
-                    <!-- Comentario -->
+                    <!-- Comentario 2.1-->
                     <div class="comentario">
                         <p class="texto-vario">Señorita Elizabeth,
                             he luchado en vano y ya no puedo
@@ -286,7 +287,7 @@
                         </div>
                         <p class="texto-descripcion-comentario">Elizabeth Bennet.  Pemberley. Abril-1814</p>
                     </div>
-                    <!-- Comentario -->
+                    <!-- Comentario 2.2-->
                     <div class="comentario">
                         <p class="texto-vario">Señor yo... aprecio todo lo que ha sufrido y lamento mucho causarle dolor, créame, no fue de forma  consciente</p>
                     </div>
@@ -297,7 +298,7 @@
                         </div>
                         <p class="texto-descripcion-comentario">Fitzwilliam Darcy. Pemberley. Abril-1814</p>
                     </div>
-                    <!-- Comentario -->
+                    <!-- Comentario 2.3-->
                     <div class="comentario">
                         <p class="texto-vario">¿Puedo preguntar por qué, con tan poca civilidad, me rechaza así?</p>
                     </div>
@@ -308,7 +309,7 @@
                         </div>
                         <p class="texto-descripcion-comentario">Elizabeth Bennet.  Pemberley. Abril-1814</p>
                     </div>
-                    <!-- Comentario -->
+                    <!-- Comentario 2.4-->
                     <div class="comentario">
                         <p class="texto-vario">!¿Y puedo preguntar por qué, con tan evidente intención de insultarme, decidió decirme que yo le agrado en contra de su buen juicio?! ¡Desde el momento en que lo conocí, su arrogancia y su egoísta desdén hacia los sentimientos de los demás hicieron darme cuenta que era el último hombre en el mundo con quien yo podría llegar a pensar en casarme!</p>
                     </div>
@@ -319,15 +320,15 @@
                         </div>
                         <p class="texto-descripcion-comentario">Fitzwilliam Darcy. Pemberley. Abril-1814</p>
                     </div>
-                    <!-- Comentario -->
+                    <!-- Comentario 2.5-->
                     <div class="comentario">
                         <img src="./gato.jpg">
                     </div>
                 </div>
-                <!-- Publicaion 3 -->
+        <!-- Publicaion 3 -->
                 <hr class="divisor-big">
                 <div class="publicacion">
-                    <!-- Descripción de publicación -->
+            <!-- Descripción de publicación -->
                     <div class="contenedor-descripcion-publicacion">
                         <div class="contenedor-foto-publicacion">
                             <img src="./lizzi.jpg">
@@ -335,29 +336,29 @@
                         <p class="texto-descripcion-publicacion"> Elizabeth Bennet. Hertfordshire. Diciembre-1814
                         </p>
                     </div>
-                    <!-- Publicación -->
+            <!-- Publicación -->
                     <div class="texto-publicacion">
                         <p class="texto-vario">Sr Darcy 😍</p>
                         <div class="imagen-compartida">
                             <img src="./boda.jpg">
                         </div>
                     </div>
-                    <!-- Reacciones a la publicación -->
+            <!-- Reacciones a la publicación -->
                     <div>
                         <span>❤️</span>
                         <span>💬</span>
                     </div>
-                    <!-- Comentarios -->
+            <!-- Comentarios -->
                     <div>
                         <p class="texto-vario">Comentarios</p>
-                        <!-- Descripción de comentarios -->
+                <!-- Descripción de comentarios -->
                         <div class="contenedor-descripcion-comentario">
                             <div class="contenedor-foto-comentario">
                                 <img src="./jane.jpg">
                             </div>
                             <p class="texto-descripcion-comentario">Jane Bennet. Hertfordshire. Diciembre-1814</p>
                         </div>
-                        <!-- Comentario -->
+                <!-- Comentario 3.1-->
                         <div class="comentario">
                             <p class="texto-vario">Creí que no te gustaba 😮</p>
                         </div>
@@ -367,13 +368,14 @@
             </div>
     </main>
     <aside>
-        <!-- Contenido Lateral -->
+        <!-- Nombre del Perfil Social -->
         <div>
         <div class="contenedor-foto-presentacion">
             <img src="./lizzi.jpg" height="40px">
         </div>
         <h2>Elizabeth Bennet</h2>
         <p class="texto-descripcion-personal">Hola! Soy Lizzi, gusto en conocerte!</p>
+        <!-- Íconos Laterales -->
         <div>
             <p class="icono-lateral">🔍 Buscar</p>
             <p class="icono-lateral">🏠︎ Inicio</p>
