@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Social Media</title>
+    <style>
+        /* Estilo GENERAL */
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100%;
+            display: grid;
+            grid-template-columns: 20% auto;
+            grid-template-rows: 5% auto 1%;
+        }
+        header,
+        aside,
+        main,
+        footer {
+            border-radius: 5px;
+            display: flex;
+        }
+        header {
+            background: rgb(248, 243, 243);
+            justify-content: space-around;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        aside {
+            background: rgb(241, 248, 138);
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        main {
+            background: rgb(160, 217, 224);
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        footer {
+            background: rgb(131, 221, 161);
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        /* Estilo ESPECÍFICO */
+        /* Header */
+        .encabezado {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .titulo {
+            font-size: 2em;
+            padding-left: 10px;
+            color: rgb(76, 88, 3);
+        }
+        .slogan {
+            color: rgb(76, 88, 3);
+        }
+        .contenedor-rueda {
+            height: 80%;
+            display: flex;
+            padding-right: 10px;
+        }
+        .rueda {
+            transition: transform 0.3s, filter 0.3s;
+            height: 100%;
+        }
+        .rueda:hover {
+            transform: scale(1.5);
+            filter: hue-rotate(90deg);
+        }
+        /* MAIN */
+        /* Descripción de publicación */
+        .contenedor-descripcion-publicacion {
+            display: flex; 
+        }
+        .contenedor-foto-publicacion {
+            height: 40px; 
+            width: 40px;
+            border-radius: 50%; 
+            overflow: hidden; 
+            position: relative; 
+        }
+        .contenedor-foto-publicacion img {
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+        }
+        .texto-descripcion-publicacion {
+            margin-left: 10px;
+            font-size: 1em;
+            color: rgb(58, 10, 104);
+        }
+        /* Publicación */
+        .texto-publicacion {
+            font-size: 1em;
+        }
+        .imagen-compartida img{
+            border-radius: 5%;
+        }
+        /* Descripción de comentarios */
+        .contenedor-descripcion-comentario{
+            display: flex;
+            position: relative;
+        }
+        .contenedor-foto-comentario {
+            width: 30px; 
+            height: 30px; 
+            border-radius: 50%; 
+            overflow: hidden; 
+            position: relative; 
+        }
+        .contenedor-foto-comentario img {
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);  
+        }
+        .texto-descripcion-comentario {
+            font-size: 0.8em;
+            margin-left: 10px;
+            color: rgba(28, 26, 121, 0.781);
+        }
+        /* Comentarios */
+        .comentario {
+            font-size: 0.8em;
+        }
+        .divisor-small {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #5b7cd6, transparent);
+        }
+        .divisor-big {
+            border: none;
+            height: 3px;
+            background-color: rgba(16, 165, 48, 0.603);
+        }
+        /* ASIDE */
+        /* Nombre de presentación*/
+        aside {
+            flex-direction: column;
+        }
+        h2 {
+            font-size: 1.2em;
+            padding-left: 5px;
+            color: rgb(76, 88, 3);;
+        }
+        .contenedor-foto-presentacion {
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            overflow: hidden; 
+            position: relative; 
+        }
+        .contenedor-foto-presentacion img {
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);  
+        }
+        .texto-descripcion-personal{
+            padding-left: 5px;
+            font-size: 1.2em;
+            color: rgb(76, 88, 3);;
+        }
+        /* Íconos Laterales */
+        .icono-lateral {
+            padding-left: 20px;
+            transition: transform 0.3s, filter 0.3s;
+            color: rgb(76, 88, 3);;
+        }
+        .icono-lateral:hover {
+            transform: scale(1.2);
+            filter: hue-rotate(90deg);
+        }
+        .texto-vario {
+            color: rgba(22, 21, 21, 0.815);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="encabezado">
+        <div>
+            <h1 class="titulo">La Colmena </h1> 
+            <samll class="slogan">"Conéctate y Crea Tu Propio Enjambre Social"</samll>
+        </div>
+        <div class="contenedor-rueda">
+            <img src="./rueda.jpg" alt="Rueda de configuración" class="rueda">
+        </div>
+    </header>
+    <main>
+        <div>
+            <div class="publicacion">
+                <!-- Descripción de publicación -->
+                <div class="contenedor-descripcion-publicacion">
+                    <div class="contenedor-foto-publicacion">
+                        <img src="./lizzi.jpg">
+                    </div>
+                    <p class="texto-descripcion-publicacion"> Elizabeth Bennet.  Hertfordshire. Noviembre-1813
+                    </p>
+                </div>
+                <!-- Publicación -->
+                <div class="texto-publicacion">
+                    <p class="texto-vario">Saludos a todos los amigos que conocí en el baile, menos a uno 🙄</p>
+                    <div class="imagen-compartida">
+                        <img src="./primer baile.jpg">
+                    </div>
+                </div>
+                <!-- Reacciones a la publicación -->
+                <div>
+                    <span>❤️</span>
+                    <span>💬</span>
+                </div>
+                <!-- Comentarios -->
+                <div>
+                    <p class="texto-vario">Comentarios</p>
+                    <!-- Descripción de comentarios -->
+                </div>
+            </div>
+            <!-- Publicación 2 -->
+            <hr class="divisor-big">
+            <div class="publicacion">
+                <!-- Descripción de publicación -->
+                <div class="contenedor-descripcion-publicacion">
+                    <div class="contenedor-foto-publicacion">
+                        <img src="./lizzi.jpg">
+                    </div>
+                    <p class="texto-descripcion-publicacion"> Elizabeth Bennet. Pemberley. Abril-1814
+                    </p>
+                </div>
+                <!-- Publicación -->
+                <div class="texto-publicacion">
+                    <p class="texto-vario">De visita con mi querida amiga en casa de Lady Catherine</p>
+                    <div class="imagen-compartida">
+                        <img src="./piano.jpg">
+                    </div>
+                </div>
+                <!-- Reacciones a la publicación -->
+                <div>
+                    <span>❤️</span>
+                    <span>💬</span>
+                </div>
+                <!-- Comentarios -->
+                <div>
+                    <p class="texto-vario">Comentarios</p>
+                    <!-- Descripción de comentarios -->
+                    <div class="contenedor-descripcion-comentario">
+                        <div class="contenedor-foto-comentario">
+                            <img src="./darcy.jpg">
+                        </div>
+                        <p class="texto-descripcion-comentario">Fitzwilliam Darcy. Pemberley. Abril-1814</p>
+                    </div>
+                    <!-- Comentario -->
+                    <div class="comentario">
+                        <p class="texto-vario">Señorita Elizabeth,
+                            he luchado en vano y ya no puedo
+                            dominarme más. Estos meses han sido un tormento. Vine a Rosings con el único objeto de verla a usted. He luchado contra mi buen juicio, contra mi familia, la inferioridad de su cuna, mi rango y muchas cosas más, pero
+                            estoy dispuesto a dejarlas a un lado y pedirle que acabe con mi agonía. La amo... con toda mi alma. Por favor, haga el
+                            honor de aceptar mi mano.</p>
+                    </div>
+                    <hr class="divisor-small">
+                    <div class="contenedor-descripcion-comentario">
+                        <div class="contenedor-foto-comentario">
+                            <img src="./lizzi.jpg">
+                        </div>
+                        <p class="texto-descripcion-comentario">Elizabeth Bennet.  Pemberley. Abril-1814</p>
+                    </div>
+                    <!-- Comentario -->
+                    <div class="comentario">
+                        <p class="texto-vario">Señor yo... aprecio todo lo que ha sufrido y lamento mucho causarle dolor, créame, no fue de forma  consciente</p>
+                    </div>
+                    <hr class="divisor-small">
+                    <div class="contenedor-descripcion-comentario">
+                        <div class="contenedor-foto-comentario">
+                            <img src="./darcy.jpg">
+                        </div>
+                        <p class="texto-descripcion-comentario">Fitzwilliam Darcy. Pemberley. Abril-1814</p>
+                    </div>
+                    <!-- Comentario -->
+                    <div class="comentario">
+                        <p class="texto-vario">¿Puedo preguntar por qué, con tan poca civilidad, me rechaza así?</p>
+                    </div>
+                    <hr class="divisor-small">
+                    <div class="contenedor-descripcion-comentario">
+                        <div class="contenedor-foto-comentario">
+                            <img src="./lizzi.jpg">
+                        </div>
+                        <p class="texto-descripcion-comentario">Elizabeth Bennet.  Pemberley. Abril-1814</p>
+                    </div>
+                    <!-- Comentario -->
+                    <div class="comentario">
+                        <p class="texto-vario">!¿Y puedo preguntar por qué, con tan evidente intención de insultarme, decidió decirme que yo le agrado en contra de su buen juicio?! ¡Desde el momento en que lo conocí, su arrogancia y su egoísta desdén hacia los sentimientos de los demás hicieron darme cuenta que era el último hombre en el mundo con quien yo podría llegar a pensar en casarme!</p>
+                    </div>
+                    <hr class="divisor-small">
+                    <div class="contenedor-descripcion-comentario">
+                        <div class="contenedor-foto-comentario">
+                            <img src="./darcy.jpg">
+                        </div>
+                        <p class="texto-descripcion-comentario">Fitzwilliam Darcy. Pemberley. Abril-1814</p>
+                    </div>
+                    <!-- Comentario -->
+                    <div class="comentario">
+                        <img src="./gato.jpg">
+                    </div>
+                </div>
+                <!-- Publicaion 3 -->
+                <hr class="divisor-big">
+                <div class="publicacion">
+                    <!-- Descripción de publicación -->
+                    <div class="contenedor-descripcion-publicacion">
+                        <div class="contenedor-foto-publicacion">
+                            <img src="./lizzi.jpg">
+                        </div>
+                        <p class="texto-descripcion-publicacion"> Elizabeth Bennet. Hertfordshire. Diciembre-1814
+                        </p>
+                    </div>
+                    <!-- Publicación -->
+                    <div class="texto-publicacion">
+                        <p class="texto-vario">Sr Darcy 😍</p>
+                        <div class="imagen-compartida">
+                            <img src="./boda.jpg">
+                        </div>
+                    </div>
+                    <!-- Reacciones a la publicación -->
+                    <div>
+                        <span>❤️</span>
+                        <span>💬</span>
+                    </div>
+                    <!-- Comentarios -->
+                    <div>
+                        <p class="texto-vario">Comentarios</p>
+                        <!-- Descripción de comentarios -->
+                        <div class="contenedor-descripcion-comentario">
+                            <div class="contenedor-foto-comentario">
+                                <img src="./jane.jpg">
+                            </div>
+                            <p class="texto-descripcion-comentario">Jane Bennet. Hertfordshire. Diciembre-1814</p>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="comentario">
+                            <p class="texto-vario">Creí que no te gustaba 😮</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            </div>
+    </main>
+    <aside>
+        <!-- Contenido Lateral -->
+        <div>
+        <div class="contenedor-foto-presentacion">
+            <img src="./lizzi.jpg" height="40px">
+        </div>
+        <h2>Elizabeth Bennet</h2>
+        <p class="texto-descripcion-personal">Hola! Soy Lizzi, gusto en conocerte!</p>
+        <div>
+            <p class="icono-lateral">🔍 Buscar</p>
+            <p class="icono-lateral">🏠︎ Inicio</p>
+            <p class="icono-lateral">💬 Mensajes</p>
+            <p class="icono-lateral">🔔 Notificaciones</p>
+        </div>
+        </div>
+    </aside>
+    <footer>
+        <small>Diseñado y producido por 'La Colmena'.  Todos los derechos reservados. Fuente: 'Orgullo y Prejuicio'</small>
+    </footer>
+</body>
+</html>
